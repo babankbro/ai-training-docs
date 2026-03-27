@@ -202,9 +202,9 @@ export default function Module51Page() {
               prompt: "ออกแบบ Hybrid Teaching Pattern ที่ผสม TPS ภายใน 5E สำหรับบทเรียน [หัวข้อ] | วิชา: [วิชา] | ระดับ: [ชั้น] | เวลา: 50 นาที | ระบุ: ขั้น E ใดใช้ TPS / คำถาม Think ในแต่ละ E / วิธี Share ที่เหมาะสม → ผลลัพธ์: Hybrid Pattern Blueprint ที่บูรณาการ Active Learning ครบถ้วน",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

@@ -134,7 +134,7 @@ export default function Module23Page() {
         {/* Full CRISPE example */}
         <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
           <p className="text-xs font-bold text-blue-700 mb-2">ตัวอย่าง Prompt เต็มรูปแบบด้วย CRISPE</p>
-          <div className="bg-white rounded-lg border border-blue-100 p-3 text-[11px] font-mono text-text-secondary space-y-1.5">
+          <div className="prompt-block">
             <p><span className="font-bold text-blue-600">C:</span> คุณเป็นผู้เชี่ยวชาญออกแบบแผนการสอนวิทยาศาสตร์ ระดับมัธยมศึกษาตอนปลาย ที่เน้น Active Learning</p>
             <p><span className="font-bold text-blue-600">R:</span> สร้างกิจกรรมการเรียนรู้แบบ Think-Pair-Share สำหรับบทเรียน 1 ชั่วโมง เรื่องระบบนิเวศและห่วงโซ่อาหาร</p>
             <p><span className="font-bold text-blue-600">I:</span> นักเรียน ม.4 จำนวน 35 คน มีพื้นฐานเรื่องสิ่งมีชีวิตแล้ว แต่ยังไม่รู้จักความสัมพันธ์ระหว่างสิ่งมีชีวิตในระบบนิเวศ</p>
@@ -192,13 +192,13 @@ export default function Module23Page() {
               <div className="grid grid-cols-2 gap-3 text-xs">
                 <div>
                   <p className="font-semibold text-red-600 mb-1.5">Prompt ปกติ</p>
-                  <div className="rounded-lg bg-red-50 border border-red-100 p-2.5 font-mono text-text-secondary">
+                  <div className="prompt-block">
                     ออกแบบ Rubric สำหรับงานเขียนเชิงสร้างสรรค์ ม.4
                   </div>
                 </div>
                 <div>
                   <p className="font-semibold text-green-700 mb-1.5">Prompt Chain-of-Thought</p>
-                  <div className="rounded-lg bg-green-50 border border-green-100 p-2.5 font-mono text-text-secondary">
+                  <div className="prompt-block">
                     ก่อนออกแบบ Rubric ให้คิดออกมาดังๆ: 1. งานเขียนเชิงสร้างสรรค์ ม.4 ควรวัดอะไรบ้าง? 2. แต่ละมิติที่วัดมีระดับต่างกันอย่างไร? 3. นักเรียน ม.4 ระดับอ่อน-เก่ง แสดงออกต่างกันอย่างไร? จากนั้นสร้าง Rubric 4 ระดับ 4 มิติ
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export default function Module23Page() {
               <p className="text-xs text-text-secondary mb-3">
                 การให้ตัวอย่าง Output ที่ต้องการก่อน (1-3 ตัวอย่าง) ช่วยให้ AI เข้าใจรูปแบบที่ต้องการได้ดีขึ้นมาก — เหมาะสำหรับงานที่ต้องการ Format เฉพาะ
               </p>
-              <div className="rounded-lg bg-slate-50 border border-card-border p-3 text-[11px] font-mono text-text-secondary">
+              <div className="prompt-block">
                 <p className="font-semibold text-text-primary mb-1.5">Template: Few-Shot Prompt</p>
                 <p>สร้างคำถาม PISA Level 3 สำหรับวิชาวิทยาศาสตร์ ในรูปแบบเดียวกับตัวอย่าง:</p>
                 <p className="mt-1.5 text-blue-600">ตัวอย่าง (บริบท: น้ำท่วม):</p>
@@ -263,7 +263,7 @@ export default function Module23Page() {
               <span className="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] font-bold flex items-center justify-center shrink-0">5</span>
               <p className="text-xs font-semibold text-text-primary">Persona + Constraint — บทบาท + ข้อจำกัด</p>
             </div>
-            <div className="rounded-lg bg-white border border-blue-100 p-3 text-[11px] font-mono text-text-secondary space-y-1">
+            <div className="prompt-block">
               <p><span className="font-bold text-blue-600">บทบาท:</span> คุณเป็นครูวิชา[X] ที่มีประสบการณ์ 20 ปี เชี่ยวชาญการสอนนักเรียนที่มีความหลากหลาย</p>
               <p><span className="font-bold text-blue-600">งาน:</span> [งานที่ต้องการ]</p>
               <p className="mt-1"><span className="font-bold text-blue-600">ข้อจำกัด (ต้องทำตามทุกข้อ):</span></p>
@@ -300,7 +300,7 @@ export default function Module23Page() {
             ].map((t) => (
               <div key={t.name} className="p-4">
                 <p className="text-xs font-semibold text-text-primary mb-1.5">{t.name}</p>
-                <div className="rounded-lg bg-slate-50 border border-card-border px-3 py-2 text-[11px] font-mono text-text-muted">{t.prompt}</div>
+                <div className="prompt-block">{t.prompt}</div>
               </div>
             ))}
           </div>
@@ -324,7 +324,7 @@ export default function Module23Page() {
             ].map((t) => (
               <div key={t.name} className="p-4">
                 <p className="text-xs font-semibold text-text-primary mb-1.5">{t.name}</p>
-                <div className="rounded-lg bg-slate-50 border border-card-border px-3 py-2 text-[11px] font-mono text-text-muted">{t.prompt}</div>
+                <div className="prompt-block">{t.prompt}</div>
               </div>
             ))}
           </div>
@@ -348,7 +348,7 @@ export default function Module23Page() {
             ].map((t) => (
               <div key={t.name} className="p-4">
                 <p className="text-xs font-semibold text-text-primary mb-1.5">{t.name}</p>
-                <div className="rounded-lg bg-slate-50 border border-card-border px-3 py-2 text-[11px] font-mono text-text-muted">{t.prompt}</div>
+                <div className="prompt-block">{t.prompt}</div>
               </div>
             ))}
           </div>
@@ -372,7 +372,7 @@ export default function Module23Page() {
             ].map((t) => (
               <div key={t.name} className="p-4">
                 <p className="text-xs font-semibold text-text-primary mb-1.5">{t.name}</p>
-                <div className="rounded-lg bg-slate-50 border border-card-border px-3 py-2 text-[11px] font-mono text-text-muted">{t.prompt}</div>
+                <div className="prompt-block">{t.prompt}</div>
               </div>
             ))}
           </div>

@@ -121,9 +121,9 @@ export default function Module54Page() {
               prompt: "สร้าง Assessment ที่ประเมินทั้ง Academic Learning และ GM+PERMA Development | วิชา: [วิชา] | หน่วย: [หน่วย] | ระดับ: [ชั้น] | ให้มี: Academic Rubric (50%) + GM Observation Checklist (25%) + PERMA Self-Report (25%) → ผลลัพธ์: Holistic Assessment Package ที่วัดทั้งความรู้และ Well-being",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

@@ -132,9 +132,9 @@ export default function Module22Page() {
             { label: "Mind Map / Concept Map", prompt: "Mind Map หัวข้อ [หัวข้อ] ระดับ ม.[X] Key Concepts สำหรับ [วิชา]" },
             { label: "PISA-style Task", prompt: "Infographic สถานการณ์จริง [บริบท เช่น น้ำท่วม PM2.5] พร้อมคำถาม L3-L4 จำนวน 3 ข้อ" },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>
@@ -191,7 +191,7 @@ export default function Module22Page() {
         {/* Slide prompt template */}
         <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
           <p className="text-xs font-bold text-blue-700 mb-2">📋 Template: Slide Generation Prompt (Gamma.app)</p>
-          <div className="bg-white rounded-lg border border-blue-100 p-3 text-xs font-mono text-text-secondary space-y-1">
+          <div className="prompt-block">
             <p>สร้าง Presentation เรื่อง &apos;[หัวข้อ]&apos; สำหรับนักเรียน[ระดับ] จำนวน: [X] Slide | โทนสี: [สี] | ภาษา: ไทย</p>
             <p>Slide 1: Title + วัตถุประสงค์การเรียนรู้ 3 ข้อ</p>
             <p>Slide 2-3: เนื้อหาหลัก [Concept 1] พร้อมตัวอย่าง</p>
@@ -244,7 +244,7 @@ export default function Module22Page() {
         {/* PISA-style template */}
         <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 mb-3">
           <p className="text-[11px] font-semibold text-text-primary mb-1">📋 Template: PISA-style Worksheet</p>
-          <p className="text-[11px] text-text-muted font-mono leading-relaxed">
+          <p className="prompt-block">
             สร้างใบงาน PISA-style เรื่อง [หัวข้อ] สำหรับ ม.[X] | บริบท: [สถานการณ์จริง เช่น น้ำท่วม ขยะ สุขภาพ] | คำถาม 5 ข้อ แบ่งตาม PISA Level: L1 (1 ข้อ): หาข้อมูลตรงจากสถานการณ์ | L2 (1 ข้อ): นำข้อมูลไปใช้ในบริบทใหม่ | L3 (2 ข้อ): อธิบายเหตุผลและสาเหตุ | L4 (1 ข้อ): ประเมินและตัดสินใจ | รูปแบบ: ข้อสอบอัตนัย พร้อม Rubric 4 ระดับ → ภาษาไทย บริบทไทย
           </p>
         </div>

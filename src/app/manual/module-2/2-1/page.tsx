@@ -171,7 +171,7 @@ export default function Module21Page() {
                   <div className="flex-1">
                     <p className="text-xs font-semibold text-text-primary">{s.th} — {s.desc}</p>
                     <div className="mt-1.5 rounded-lg bg-slate-50 border border-card-border px-3 py-1.5">
-                      <p className="text-[11px] text-text-muted font-mono">{s.prompt}</p>
+                      <p className="prompt-block">{s.prompt}</p>
                     </div>
                   </div>
                 </div>

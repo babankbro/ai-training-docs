@@ -328,9 +328,9 @@ export default function Module43Page() {
               prompt: "แปลงคำถามจากหนังสือเรียนต่อไปนี้เป็น Guided Questions Socratic | [วางคำถามจากหนังสือเรียน] | เน้น: Open-ended / CT / ไม่มี Yes/No Answer → ผลลัพธ์: Guided Questions CT-ready ที่กระตุ้น Analysis และ Evaluation",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

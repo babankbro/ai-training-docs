@@ -277,9 +277,9 @@ export default function Module92Page() {
               prompt: "ฉันเห็นข่าวว่า [สรุปข่าว AI] | ช่วยตรวจสอบความน่าเชื่อถือของข่าวนี้: (1) แหล่งที่มาน่าเชื่อถือไหม? (2) ข้อมูลสอดคล้องกับการวิจัยล่าสุดไหม? (3) มีมุมมองอื่นที่ควรพิจารณาไหม? → ผลลัพธ์: Fact-Check Report สั้นๆ",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

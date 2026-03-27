@@ -132,9 +132,9 @@ export default function Module44Page() {
               prompt: "ออกแบบ Portfolio Prompt CT | วิชา: [วิชา] | ระดับ: [ชั้น] | ช่วงเวลา: [ภาคเรียน/ปี] | ให้มีคำถามสะท้อน 5 ด้าน: CT ที่พัฒนา / ตัวอย่างงาน CT / ความท้าทาย / Portfolio / สรุป | → ผลลัพธ์: CT Portfolio System ที่วัด CT ได้อย่างต่อเนื่อง",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

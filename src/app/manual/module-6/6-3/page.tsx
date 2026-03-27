@@ -102,7 +102,7 @@ export default function Module63Page() {
         <h2 className="text-lg font-bold text-text-primary mb-3">6.3.2 Mega Prompt Template สำหรับแผนครบ 13 หัวข้อ</h2>
         <div className="rounded-xl border border-indigo-200 bg-indigo-50/50 p-4 mb-4">
           <p className="text-xs font-bold text-indigo-700 mb-3">Mega Prompt สำเร็จรูป — เติม [ ] แล้วใช้ได้ทันที</p>
-          <div className="space-y-2 text-xs font-mono">
+          <div className="prompt-block">
             {[
               ["Role:", "คุณเป็นครูผู้เชี่ยวชาญและนักออกแบบหลักสูตรระดับมัธยมศึกษา"],
               ["Context:", "โรงเรียน [ชื่อ] ระดับ [ชั้น] นักเรียน [จำนวน] คน ห้องเรียน [สภาพห้อง]"],
@@ -177,7 +177,7 @@ export default function Module63Page() {
               </div>
               <ul className="space-y-1">
                 {r.prompts.map((p, i) => (
-                  <li key={i} className="flex gap-1.5 text-xs text-text-secondary font-mono">
+                  <li key={i} className="flex gap-1.5 text-xs text-text-secondary font-mono" style={{fontFamily: 'inherit'}}>
                     <span className="text-text-muted shrink-0">▸</span>{p}
                   </li>
                 ))}
@@ -213,9 +213,9 @@ export default function Module63Page() {
               prompt: "ช่วยสร้าง Prompt Template ส่วนตัวสำหรับครู [วิชา] ระดับ [ชั้น] โรงเรียน [บริบท] | Template ต้องใช้ซ้ำได้ทุกหน่วย ปรับแค่ [วิชา]/[หน่วย]/[เวลา] | รวม Role+Context+Format+Constraints ที่เหมาะกับบริบทของฉัน → ผลลัพธ์: Personal Mega Prompt Template พร้อมใช้ทันที",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

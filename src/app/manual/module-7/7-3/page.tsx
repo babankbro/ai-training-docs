@@ -258,9 +258,9 @@ export default function Module73Page() {
               prompt: "ฉันเพิ่งเสร็จการสร้างสื่อการสอนด้วย AI และนำไปใช้แล้ว | [อธิบายประสบการณ์สั้นๆ] | ช่วยให้คำถาม Reflection 5 ข้อที่ช่วยให้ฉันคิด Deep | ให้ Reflection Template ง่ายๆ สำหรับใช้ทุกครั้งหลังสร้างสื่อ → ผลลัพธ์: Reflection Template ที่ใช้ซ้ำได้",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

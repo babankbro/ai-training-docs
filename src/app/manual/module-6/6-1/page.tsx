@@ -169,9 +169,9 @@ export default function Module61Page() {
               prompt: "วิเคราะห์การวัดผลในแผนนี้ว่าครบ K/P/A หรือไม่: [วางส่วนการวัดผลจากแผนการสอน] | ถ้าขาด: เสนอเครื่องมือวัดผลที่เหมาะสมสำหรับมิติที่ขาด พร้อมวิธีการใช้ → ผลลัพธ์: Assessment Plan ครบ K/P/A พร้อมใช้ในแผนจริง",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

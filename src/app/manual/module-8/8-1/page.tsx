@@ -222,9 +222,9 @@ export default function Module81Page() {
               prompt: "Here is my CT rubric for [หัวข้อ]: [วาง Rubric] | Does it cover all 6 CT components: Decomposition, Pattern Recognition, Abstraction, Algorithm Design, Analysis, Evaluation? | Are the criteria clear and measurable? | Suggest improvements and additions for missing components. → ผลลัพธ์: CT Rubric Audit Report + Revised Version",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

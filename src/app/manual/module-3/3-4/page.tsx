@@ -191,9 +191,9 @@ export default function Module34Page() {
               prompt: "จากบทอ่านต่อไปนี้: [วางบทอ่านต้นฉบับ] | สร้าง 3 เวอร์ชัน: เวอร์ชัน 1 (ม.1-2): ลดคำศัพท์ยาก ย่อประโยค คงเนื้อหาสำคัญ | เวอร์ชัน 2 (ม.3-4): ใกล้ต้นฉบับ ลด Jargon เล็กน้อย | เวอร์ชัน 3 (ม.5-6): ต้นฉบับหรือเพิ่มความซับซ้อน | แต่ละเวอร์ชัน 250–350 คำ พร้อมคำถาม PISA-style 3 ข้อ",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

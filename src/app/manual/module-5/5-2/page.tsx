@@ -244,9 +244,9 @@ export default function Module52Page() {
               prompt: "เขียนข้อความสื่อสารกับผู้ปกครองที่ส่งเสริม Growth Mindset | สถานการณ์: [เช่น นักเรียนทำคะแนนต่ำ / มีพัฒนาการ / มีปัญหาพฤติกรรม] | เน้น: กระบวนการและความพยายาม / Action Plan ร่วมกัน / ไม่ตีตรา → ผลลัพธ์: Parent Communication Template ที่ส่งเสริม GM ทั้งที่บ้านและโรงเรียน",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

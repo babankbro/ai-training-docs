@@ -133,7 +133,7 @@ export default function Module41Page() {
                     <p className="text-xs text-text-muted">— {c.thai}</p>
                   </div>
                   <p className="text-xs text-text-secondary mb-1.5">{c.desc}</p>
-                  <p className="text-[11px] text-text-muted font-mono">{c.ex}</p>
+                  <p className="prompt-block">{c.ex}</p>
                 </div>
               </div>
             </div>
@@ -267,9 +267,9 @@ export default function Module41Page() {
               prompt: "สร้างเครื่องมือประเมิน Computational Thinking วิชา [วิชา] | ครอบคลุม CT 6 องค์ประกอบ พร้อม Rubric 4 ระดับและ Checklist | → ผลลัพธ์: CT Rubric ครบ 6 องค์ประกอบ พร้อม Feedback Strategy",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

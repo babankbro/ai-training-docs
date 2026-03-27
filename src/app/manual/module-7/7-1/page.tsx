@@ -248,9 +248,9 @@ export default function Module71Page() {
               prompt: "ช่วยฉันประเมินว่าสื่อต่อไปนี้มีคุณภาพดีตามกรอบ SAFE-T หรือไม่: [อธิบายสื่อ] | ประเมินทีละด้าน: Safe / Accurate / Free / Easy / Teaching-fit | ให้ Checklist ที่ครูใช้ประเมินสื่อทุกชิ้น | ให้ข้อเสนอแนะในการปรับปรุง → ผลลัพธ์: SAFE-T Assessment Report + Actionable Improvements",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

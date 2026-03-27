@@ -345,9 +345,9 @@ export default function Module33Page() {
               prompt: "วิเคราะห์ผลการประเมิน Reading Literacy ของนักเรียน [จำนวน] คน | [วางข้อมูลคะแนน/ตัวอย่างคำตอบ] | สรุป: จุดแข็ง / จุดพัฒนา / คำแนะนำการสอนเพิ่มเติม → ผลลัพธ์: รายงานวิเคราะห์พร้อมแผนพัฒนาการอ่านรายบุคคล",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

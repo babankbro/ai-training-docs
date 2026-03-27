@@ -288,9 +288,9 @@ export default function Module32Page() {
               prompt: "สร้างเครื่องมือประเมิน Reading Literacy สำหรับกิจกรรม 5E วิชา [ชื่อวิชา] โดยใช้กรอบ PISA: Locate / Integrate / Reflect | ให้มี Rubric 4 ระดับ และตัวอย่างงานนักเรียนแต่ละระดับ → ผลลัพธ์: Rubric RL พร้อม Anchor Papers สำหรับครู",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

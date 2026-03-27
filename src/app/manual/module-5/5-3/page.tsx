@@ -207,9 +207,9 @@ export default function Module53Page() {
               prompt: "เชื่อมโยง PERMA Framework กับมาตรฐานการเรียนรู้ในวิชา [วิชา] ระดับ [ชั้น] | ระบุว่ามาตรฐานข้อใดสัมพันธ์กับ PERMA องค์ประกอบใด | เสนอ 3 กิจกรรมที่บูรณาการ PERMA + มาตรฐาน → ผลลัพธ์: PERMA-Curriculum Alignment Map พร้อมแผนกิจกรรม",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

@@ -268,9 +268,9 @@ export default function Module83Page() {
               prompt: "I have this open-ended question: [วางคำถาม]. | Create a rubric for grading student responses with 4 levels: Excellent (100%): [Descriptor] | Good (75%): [Descriptor] | Fair (50%): [Descriptor] | Needs Improvement (0%): [Descriptor] | Provide example student answer for each level. → ผลลัพธ์: Grading Rubric 4 ระดับพร้อม Exemplar",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

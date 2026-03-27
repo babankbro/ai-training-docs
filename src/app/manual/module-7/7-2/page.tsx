@@ -243,9 +243,9 @@ export default function Module72Page() {
               prompt: "ช่วยฉันออกแบบ Interactive Lesson 40 นาทีเรื่อง [หัวข้อ] ระดับ [ชั้น] | ต้องการรวม: Kahoot (Guided Practice) + Mentimeter (Opening) + Exit Ticket (Closure) | ให้โครงสร้างเวลา 5 ส่วนพร้อมคำอธิบายแต่ละส่วน → ผลลัพธ์: Interactive Lesson Blueprint พร้อมลิงก์เครื่องมือที่แนะนำ",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

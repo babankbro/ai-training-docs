@@ -213,9 +213,9 @@ export default function Module82Page() {
               prompt: "Here is a PISA question: [วางคำถาม] | Here is a student's answer: [วางคำตอบนักเรียน] | Please provide: (1) What RL level does this answer demonstrate (L1-L4)? (2) Score: Full Credit / Partial Credit / No Credit — Why? (3) Specific, constructive feedback for improvement → ผลลัพธ์: Student Feedback + Level Diagnosis",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

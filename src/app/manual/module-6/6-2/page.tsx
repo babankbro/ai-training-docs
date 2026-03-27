@@ -232,9 +232,9 @@ export default function Module62Page() {
               prompt: "สร้าง Portfolio Prompt สำหรับนักเรียนสะท้อนการเรียนรู้ตลอดหน่วย [หน่วย] | วิชา: [วิชา] | ระดับ: [ชั้น] | ระยะเวลา: [จำนวน] สัปดาห์ | ให้มี: 5 คำถาม Reflection ครอบคลุม K/P/A + PERMA Self-check → ผลลัพธ์: Portfolio System ครบวงจร พร้อมเกณฑ์ประเมิน",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>

@@ -191,9 +191,9 @@ export default function Module64Page() {
               prompt: "จัด Format แผนการสอนต่อไปนี้ให้สวยงามและอ่านง่ายสำหรับการแชร์กับเพื่อนครู: [วางแผนสุดท้ายที่ Finalize แล้ว] | ให้มี: Executive Summary 1 หน้า + แผนเต็ม + Rubric + Quick-Start Guide → ผลลัพธ์: Shareable Lesson Plan Package ที่ครูอื่น Pick-and-Teach ได้เลย",
             },
           ].map((t) => (
-            <div key={t.label} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+            <div key={t.label} className="space-y-1.5">
               <p className="text-[11px] font-semibold text-text-primary mb-1">{t.label}</p>
-              <p className="text-[11px] text-text-muted font-mono leading-relaxed">{t.prompt}</p>
+              <p className="prompt-block">{t.prompt}</p>
             </div>
           ))}
         </div>
