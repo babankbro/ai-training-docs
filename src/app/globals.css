@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #f8f9fd;
+  --color-foreground: #1e2340;
+  --color-sidebar-bg: #f1f2f9;
+  --color-sidebar-border: #dde0f0;
+  --color-card-bg: #ffffff;
+  --color-card-border: #e4e7f5;
+  --color-accent: #7580be;
+  --color-accent-hover: #6470ae;
+  --color-accent-light: rgba(117, 128, 190, 0.1);
+  --color-text-primary: #1a1f3d;
+  --color-text-secondary: #4a5280;
+  --color-text-muted: #8e96bc;
+  --color-success: #6a8fd4;
+  --color-warning: #9b8fd4;
+  --color-info: #7aa3cc;
+  --color-day1: #6b7ab8;
+  --color-day2: #8499cc;
+  --color-day3: #9b8fd4;
+  --color-day4: #7aa3cc;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #e2e8f0 transparent;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Sidebar active link */
+.sidebar-link-active {
+  background: var(--color-accent-light);
+  color: var(--color-accent) !important;
+  border-left: 2px solid var(--color-accent);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for sidebar */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #c5caea;
+  border-radius: 2px;
+}
+
+/* Table of contents active */
+.toc-active {
+  color: var(--color-accent) !important;
+  border-left-color: var(--color-accent) !important;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* PLO Badge colors */
+.plo-badge-1 { background: rgba(107, 122, 184, 0.12); color: #6b7ab8; }
+.plo-badge-2 { background: rgba(132, 153, 204, 0.12); color: #8499cc; }
+.plo-badge-3 { background: rgba(155, 143, 212, 0.12); color: #9b8fd4; }
+.plo-badge-4 { background: rgba(122, 163, 204, 0.12); color: #7aa3cc; }
+
+/* Tree connector lines */
+.tree-line {
+  position: relative;
+}
+.tree-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #dde0f0;
+}
+.tree-node::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  width: 20px;
+  height: 2px;
+  background: #dde0f0;
 }
